@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Generator</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Generator</h1>
+    <div id="message" class="error"></div>
+    <form id="imageForm" method="post" action="/makeimage">
+        <label for="width">Width (pixels):</label>
+        <input type="number" id="width" name="width" required><br>
+
+        <label for="height">Height (pixels):</label>
+        <input type="number" id="height" name="height" required><br>
+
+        <label for="text">Text:</label>
+        <input type="text" id="text" name="text" required><br>
+
+        <button type="submit">Generate Image</button>
+    </form>
+    <div id="imageContainer">
+        <h2>Generated Image</h2>
+        <img id="thumbnail" src="" alt="Generated Image">
+    </div>
+
+    <script>
+        document.getElementById('imageForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+            const messageDiv = document.getElementById('message');
+            messageDiv.textContent = '';
+
+            fetch('/makeimage', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    return response.json().then(data => {
+                        throw new Error(data.error || 'Server error');
+                    });
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.image) {
+                    const thumbnail = document.getElementById('thumbnail');
+                    thumbnail.src = 'data:image/jpeg;base64,' + data.image;
+                } else if (data.error) {
+                    messageDiv.textContent = data.error;
+                }
+            })
+            .catch(error => {
+                messageDiv.textContent = error.message || 'An unexpected error occurred.';
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
