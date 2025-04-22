@@ -16,10 +16,13 @@
 3. Реализация решения без фронтэнда, т. е. только бэкэнда (проверка с помощью Postman, учесть CORS). 
 4. Вывод и отображение самого изображения на страницу с формой (без перезагрузки страницы, асинхронно) или другую страницу как thumbnail.
 
+[Ссылка на борд в Replit без усложнения](https://replit.com/@yrmelnikno/LR10?v=1)
+
+[Ссылка на борд в Replit с усложнением (пункт 4)](https://replit.com/@yrmelnikno/difficultLR10?v=1)
 
 ### Решение (без выбора усложнений)
 
-[Ссылка на борд в Replit](https://replit.com/@yrmelnikno/LR10?v=1)
+[Ссылка на борд в Replit без усложнения](https://replit.com/@yrmelnikno/LR10?v=1)
 
 Сначала код разрабатывался локально, но для получения https использовался реплит, т.к. на мой взгляд это быстрое и удобное развертывание, хоть публичная ссылка представляется только во время запуска веб-приложения. Создана два варианта вывода изображения: закодированное в кодировке base64 и относительный публичный URL картинки, сохранённый на стороне сервера Flask.
 
@@ -29,9 +32,82 @@
 
 ![image](https://github.com/user-attachments/assets/3a9a211d-c169-4886-97f2-72ed25e92100)
 
+**1 вариант: кодировка base64**
+
+```
+# Вариант 1
+            img_base64 = base64.b64encode(img_io.read()).decode('utf-8')
+            return render_template('makeimage.html', message=None, image=img_base64)
+```
+
 Если ввести недопустимые значения, то по маршруту ("/makeimage") будет показана ошибка.
 ![image](https://github.com/user-attachments/assets/cf15b0f9-d8cc-454c-a743-ba7147f0a2b1)
 
 А если ввести верные значения, то по маршруту ("/makeimage") будет выведено изображение.
 ![image](https://github.com/user-attachments/assets/a48781dd-ff27-44e7-9a2c-e5e0a403d72d)
 
+**2 вариант: относительный публичный URL картинки, сохранённый на стороне сервера Flask**
+```
+# Вариант 2
+            image_filename = f"image_{width}x{height}.jpg"
+            img_path = os.path.join(app.config['UPLOAD_FOLDER'], image_filename)
+            img.save(img_path, 'JPEG')
+            image_url = os.path.join(app.config['UPLOAD_FOLDER'], image_filename) 
+            
+            return render_template('makeimage.html', message=None, image_url=image_url)
+```
+
+Если ввести недопустимые значения, то по маршруту ("/makeimage") будет показана ошибка.
+![image](https://github.com/user-attachments/assets/68672b1f-abdd-4b05-b359-25c86c79eee3)
+
+А если ввести верные значения, то по маршруту ("/makeimage") будет сохраняться изображение в папку static/images.
+![image](https://github.com/user-attachments/assets/00de1e4c-b2bf-402f-a7d9-b0040e611cd8)
+![image](https://github.com/user-attachments/assets/76544cd0-dabb-4819-a6b9-3e3108ec45b0)
+
+
+**Маршрут ("/login")**
+
+Выводит логин в MOODLE
+
+![image](https://github.com/user-attachments/assets/aeb1028f-66c1-4291-a72c-cb9a8cd71c7e)
+
+
+### Решение (с усложнением: Вывод и отображение самого изображения на страницу с формой (без перезагрузки страницы, асинхронно) или другую страницу как thumbnail.)
+
+[Ссылка на борд в Replit с усложнением](https://replit.com/@yrmelnikno/difficultLR10?v=1)
+
+Сначала код разрабатывался локально, но для получения https использовался реплит, т.к. на мой взгляд это быстрое и удобное развертывание, хоть публичная ссылка представляется только во время запуска веб-приложения. Использовалась только кодировка base64 и вывод и отображение самого изображения на страницу с формой (без перезагрузки страницы, асинхронно).
+
+Представление решения будет показано через запущенный реплит по ссылке на приложение [https://4455c7e3-8215-4a6d-9b07-da7a6937125a-00-2ibhrljqtuoxi.sisko.replit.dev/](https://4455c7e3-8215-4a6d-9b07-da7a6937125a-00-2ibhrljqtuoxi.sisko.replit.dev/)
+
+**Маршрут ("/")**
+
+![image](https://github.com/user-attachments/assets/57be0935-ad92-4294-a82e-f294b557cc52)
+
+
+Если ввести недопустимые значения, то по этому же маршруту будет выведена ошибка 
+
+![image](https://github.com/user-attachments/assets/e33263a7-e2ee-4e79-a5a7-1e9334417f4e)
+
+А если ввести верные значения, то по этому же маршруту будет выведено изображение 
+
+![image](https://github.com/user-attachments/assets/b241ea40-caa7-4124-8844-a34ddc0b9913)
+
+**Маршрут ("/makeimage") можно проверить через Postman, но я использовала Insomnia**
+
+![image](https://github.com/user-attachments/assets/ea6be12f-5ceb-4f54-9e13-e36938fd3bfa)
+
+***По маршруту /makeimage происходит:***
+
+1. Проверка метода запроса
+2. Получение данных из формы
+3. Валидация размеров
+4. Создание изображения
+5. Кодирование изображения в Base64
+6. Отправка JSON-ответа
+
+**Маршрут ("/login")**
+
+Выводит логин в MOODLE
+
+![image](https://github.com/user-attachments/assets/91a6d98d-b8dc-42b9-8dc8-56640c7f7d1f)
