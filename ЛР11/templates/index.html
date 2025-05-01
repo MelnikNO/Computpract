@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decrypter</title>
+</head>
+<body>
+    <h1>Decrypter</h1>
+
+    <form id="decryptionForm" enctype="multipart/form-data">
+        <label for="key">Private Key:</label><br>
+        <input type="file" id="key" name="key"><br><br>
+
+        <label for="secret">Encrypted Text:</label><br>
+        <input type="file" id="secret" name="secret"><br><br>
+
+        <button type="button" onclick="decryptMessage()">Decrypt</button>
+    </form>
+
+    <h2>Decrypted Message:</h2>
+    <p id="decryptedText"></p>
+
+    <script>
+        async function decryptMessage() {
+            const form = document.getElementById('decryptionForm');
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch('/decypher', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    const decryptedText = await response.text();
+                    document.getElementById('decryptedText').textContent = decryptedText;
+                } else {
+                    const errorData = await response.json();
+                    document.getElementById('decryptedText').textContent = `Error: ${errorData.error}`;
+                }
+            } catch (error) {
+                document.getElementById('decryptedText').textContent = `Network Error: ${error}`;
+            }
+        }
+    </script>
+
+    <script src="../static/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
