@@ -32,3 +32,7 @@
 ---
 
 ## Тема 10 - Генерация изображения веб-сервером по запросу: [Лабораторная работа 10](https://github.com/MelnikNO/Computpract/tree/main/ЛР10)
+
+---
+
+## Тема 11 - Ассимитричное шифрование: [Лабораторная работа 11](https://github.com/MelnikNO/Computpract/tree/main/ЛР11#readme)
