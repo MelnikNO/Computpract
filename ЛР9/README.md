@@ -23,21 +23,21 @@ s3.put_object(Bucket='bucket-name', Key='object_name', Body='TEST', StorageClass
 
 ### Создание бакета (хранилище) в Yandex Cloud
 
-Создание
+**Создание**
 
 ![image](https://github.com/user-attachments/assets/e16f5ca3-c5a0-408e-82df-c5f8321b74a2)
 
-Создан
+**Создан**
 
 ![image](https://github.com/user-attachments/assets/834a04c9-210e-4007-a09e-6065e2d3bd86)
 
 ### Создание сервисного аккаунта (Identity and Access Management)
 
-Создание (выбираем роль: storage.editor)
+**Создание** (выбираем роль: storage.editor)
 
 ![image](https://github.com/user-attachments/assets/4112e612-5f35-4dd4-9b89-3d2ddc38e194)
 
-Создан
+**Создан**
 
 Также создаем ключ (выбираем первое для object storage и берем идентификатор ключа и секретный ключ)
 
@@ -45,7 +45,7 @@ s3.put_object(Bucket='bucket-name', Key='object_name', Body='TEST', StorageClass
 
 ### Реализация функции (локально) для выполнения основных операций с объектами в хранилище: получение списка загруженных файлов, загрузка файла в бакет, получение файла, удаление файла
 
-Код написан на python с использованием boto 3
+[Код написан на python с использованием boto 3]()
 
 * Для инициализациии клиента
 
@@ -55,11 +55,12 @@ s3.put_object(Bucket='bucket-name', Key='object_name', Body='TEST', StorageClass
 
 ![image](https://github.com/user-attachments/assets/1dda487d-72f4-4c4e-bdb7-2813e4c6a67d)
 
-Результат:
+**Результат:**
 
 ![image](https://github.com/user-attachments/assets/534e7ae2-bd50-475b-9cb2-a2ddf3a501eb)
 
 * Расскоментируем удаление для его показа (файл test-file.txt copy создан вручную для просмотра других функций)
+
 
 
 
