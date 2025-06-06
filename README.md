@@ -31,6 +31,10 @@
 
 ---
 
+## Тема 9 - Объектное хранилище S3. Yandex Object Storage: [Object Storage. Практическая работа](https://github.com/MelnikNO/Computpract/tree/main/ЛР9#readme)
+
+---
+
 ## Тема 10 - Генерация изображения веб-сервером по запросу: [Лабораторная работа 10](https://github.com/MelnikNO/Computpract/tree/main/ЛР10)
 
 ---
