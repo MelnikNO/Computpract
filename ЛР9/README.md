@@ -62,6 +62,9 @@ s3.put_object(Bucket='bucket-name', Key='object_name', Body='TEST', StorageClass
 * Расскоментируем удаление для его показа (файл test-file.txt copy создан вручную для просмотра других функций)
 
 
+![image](https://github.com/MelnikNO/Computpract/blob/main/Screen/Снимок%20экрана%202025-06-06%20233056.png)
 
+**Результат:** (файл удалился)
 
+![image](https://github.com/user-attachments/assets/77876d09-6df1-42d1-8fb0-e11bf2fd9d5c)
 
