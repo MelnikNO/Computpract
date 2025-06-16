@@ -17,6 +17,9 @@
 [Ссылка на Colab](https://colab.research.google.com/drive/1_rODFcOWYEZnnTmg4AIbQQc5_wMnEj8e?usp=sharing)
 
 
-[Файл CSV с данными]()
+[Файл CSV с данными](https://github.com/MelnikNO/Computpract/blob/main/ЛР15/herzen_news.csv)
 
-[Файл txt с текстом новостей]()
+[Файл txt с текстом новостей](https://github.com/MelnikNO/Computpract/blob/main/ЛР15/all_news.txt)
+
+![image](https://github.com/user-attachments/assets/a0061f30-be19-4144-88d7-617bc33e83be)
+
