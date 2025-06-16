@@ -119,7 +119,7 @@ $$ LANGUAGE plpgsql;
 
 Для переменных окружений, которые используются в программе, создан файл .env.
 
-Программа в файле main.py.
+Программа в файле [main.py](https://github.com/MelnikNO/Computpract/blob/main/ЛР16/main.py).
 
 **Результат программы:**
 
