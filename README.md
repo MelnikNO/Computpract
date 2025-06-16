@@ -48,3 +48,7 @@
 ---
 
 ## Тема 15 - Анализ текста: [Лабораторная работа 15](https://github.com/MelnikNO/Computpract/tree/main/ЛР15#readme)
+
+---
+
+## Тема 15 - Имитация аномалии «Потерянное обновление» на примере управления запасами книг в библиотеке: [Лабораторная работа 16](https://github.com/MelnikNO/Computpract/tree/main/ЛР16#readme)
