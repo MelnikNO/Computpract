@@ -40,3 +40,11 @@
 ---
 
 ## Тема 11 - Ассимитричное шифрование: [Лабораторная работа 11](https://github.com/MelnikNO/Computpract/tree/main/ЛР11#readme)
+
+---
+
+## Тема 14 - Скрапинг: [Лабораторная работа 14](https://github.com/MelnikNO/Computpract/tree/main/ЛР14#readme)
+
+---
+
+## Тема 15 - Анализ текста: [Лабораторная работа 15](https://github.com/MelnikNO/Computpract/tree/main/ЛР15#readme)
