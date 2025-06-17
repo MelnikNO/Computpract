@@ -14,7 +14,7 @@
 
 ![image_2025-06-17_20-20-03](https://github.com/user-attachments/assets/45fd8c8e-8390-4e11-bbcb-8c317816a77e)
 
-Создаем вручную файл pyproject.toml и заполняем
+Создаем вручную файл [pyproject.toml](https://github.com/MelnikNO/Computpract/blob/main/ЛР17/pyproject.toml) и заполняем
 
 ![image_2025-06-17_22-53-22](https://github.com/user-attachments/assets/ff9410df-82b5-4f8f-bac8-f6e5298d81c3)
 
@@ -23,15 +23,15 @@
 
 **2 шаг: Запуск тестов и основной программы**
 
-Запуск test/test_core.py
+Запуск [test/test_core.py](https://github.com/MelnikNO/Computpract/blob/main/ЛР17/tests/test_core.py)
 
 ![image_2025-06-17_23-14-09](https://github.com/user-attachments/assets/bfa7f288-90fd-461d-8613-475184e0508f)
 
-Запуск main.py
+Запуск [main.py](https://github.com/MelnikNO/Computpract/blob/main/ЛР17/main.py)
 
 ![image_2025-06-17_23-17-15](https://github.com/user-attachments/assets/c37b507d-0540-40ca-b4e1-2e367fb20574)
 
-Генерация документации calc-history.log.txt
+Генерация документации [calc-history.log.txt](https://github.com/MelnikNO/Computpract/blob/main/ЛР17/calc-history.log.txt)
 
 ![image_2025-06-17_23-20-52](https://github.com/user-attachments/assets/ae179d71-ba65-4d3f-9db5-48115d27fe0f)
 
