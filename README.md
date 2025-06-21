@@ -47,6 +47,10 @@
 
 ---
 
+## Тема 12 - Облачные приложения - Yandex.Serverless Applications: [Практическая работа 12](https://github.com/MelnikNO/Computpract/blob/main/ЛР12.md)
+
+---
+
 ## Тема 14 - Скрапинг: [Лабораторная работа 14](https://github.com/MelnikNO/Computpract/tree/main/ЛР14#readme)
 
 ---
