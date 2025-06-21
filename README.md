@@ -19,6 +19,10 @@
 
 ---
 
+## Тема 5 - WebAssembly: [Лабораторная работа 5](https://github.com/MelnikNO/Computpract/blob/main/ЛР5.md)
+
+---
+
 ## Тема 6 - Создание собственного веб-сервера, GET-запрос: [Лабораторная работа 6](https://github.com/MelnikNO/Comppractic2c)
 
 ---
