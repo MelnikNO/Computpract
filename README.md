@@ -64,3 +64,15 @@
 ---
 
 ## Тема 17 - Настройка проекта калькулятора с помощью Poetry: [Лабораторная работа 17](https://github.com/MelnikNO/Computpract/tree/main/ЛР17#readme)
+
+---
+
+## Тема 18 - Создание сайта с помощью Cursor AI: [Лабораторная работа 18](https://github.com/MelnikNO/Computpract/tree/main/ЛР18#readme)
+
+---
+
+## Тема 19 - Redis: [Лабораторная работа 19](https://github.com/MelnikNO/Computpract/tree/main/ЛР19#readme)
+
+---
+
+## Тема 20 - Собственная идея реализации Singleton: [Лабораторная работа 20](https://github.com/MelnikNO/Computpract/tree/main/ЛР20#readme)
