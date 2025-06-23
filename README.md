@@ -1,6 +1,6 @@
 # Computpract
 
-## Тема 1 - Создание сайта-портфолио - Hugo Framework: [Развертывание сайта на Hugo](https://github.com/MelnikNO/web_portfolioversion4)
+## Тема 1 - Создание сайта-портфолио - Hugo Framework: [Развертывание сайта на Hugo](https://melnikno.github.io/web_portfolioversion4/)
 
 ---
 
