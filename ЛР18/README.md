@@ -25,6 +25,6 @@ Add a small author credit in the bottom corner: 'MelnikNO'.
 Make the layout professional and well-structured."*
 ```
 
-**Результат ([index.html]())**
+**Результат ([index.html](https://github.com/MelnikNO/Computpract/blob/main/ЛР18/index.html))**
 
 ![image](https://github.com/user-attachments/assets/40d32a7f-619e-4d0c-828a-796d425833de)
